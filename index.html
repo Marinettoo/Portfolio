@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jesús Pérez Marinetto — Portfolio</title>
+<meta name="description" content="Jesús Pérez Marinetto, administrador de sistemas informáticos y redes, especializándose en inteligencia artificial, Big Data, gestión de datos y entrenamiento de modelos.">
+<link rel="canonical" href="https://marinettoo.es/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jesús Pérez Marinetto — Portfolio">
+<meta property="og:description" content="Administrador de sistemas informáticos y redes, especializándose en IA, Big Data y gestión de datos.">
+<meta property="og:url" content="https://marinettoo.es/">
+<meta property="og:image" content="https://marinettoo.es/assets/jesus.jpg">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Aplica tema e idioma guardados antes de pintar (evita parpadeos) -->
+<script>
+(function () {
+  try {
+    var d = document.documentElement;
+    var t = localStorage.getItem('theme');
+    if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    d.setAttribute('data-theme', t);
+    var l = localStorage.getItem('lang');
+    if (l === 'en' || l === 'es') d.lang = l;
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/icons.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+
+<!-- ============================ CABECERA ============================ -->
+<header class="site-header" id="site-header">
+  <div class="navbar">
+    <a class="brand" href="#top" id="brand" tabindex="-1" aria-hidden="true">Marinetto</a>
+
+    <nav class="nav-desktop" aria-label="Principal" data-i18n-label="navAria">
+      <a class="navlink" href="#about" data-i18n="navAbout">Sobre mí</a>
+      <a class="navlink" href="#stack" data-i18n="navStack">Tecnologías</a>
+      <a class="navlink" href="#experience" data-i18n="navExperience">Experiencia</a>
+      <a class="navlink" href="#certs" data-i18n="navCerts">Certificaciones</a>
+      <a class="navlink" href="#projects" data-i18n="navProjects">Proyectos</a>
+      <a class="navlink" href="#contact" data-i18n="navContact">Contacto</a>
+      <div class="controls">
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="theme-btn js-theme" aria-label="Cambiar a modo oscuro">
+          <svg class="ti" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="sun"><path d="M12 8a4 4 0 1 0 0 8a4 4 0 0 0 0-8M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g><g class="moon"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></g></svg>
+        </button>
+      </div>
+    </nav>
+
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-panel" aria-label="Abrir menú">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path id="nav-icon" d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+
+    <div class="nav-panel" id="nav-panel">
+      <a class="panel-link pitem" href="#about" data-i18n="navAbout">Sobre mí</a>
+      <a class="panel-link pitem" href="#stack" data-i18n="navStack">Tecnologías</a>
+      <a class="panel-link pitem" href="#experience" data-i18n="navExperience">Experiencia</a>
+      <a class="panel-link pitem" href="#certs" data-i18n="navCerts">Certificaciones</a>
+      <a class="panel-link pitem" href="#projects" data-i18n="navProjects">Proyectos</a>
+      <a class="panel-link pitem" href="#contact" data-i18n="navContact">Contacto</a>
+      <div class="controls panel-controls pitem">
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="theme-btn js-theme" aria-label="Cambiar a modo oscuro">
+          <svg class="ti" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="sun"><path d="M12 8a4 4 0 1 0 0 8a4 4 0 0 0 0-8M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g><g class="moon"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></g></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============================ INICIO ============================ -->
+  <section class="hero" id="top">
+    <div class="hero-bg a-fade" aria-hidden="true" style="animation-delay: .2s">
+      <svg viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice">
+        <g>
+          <path class="route" d="M0 150H260V90H560V150H900"/>
+          <path class="route" d="M1440 120H1180V200H980V120H800"/>
+          <path class="route" d="M0 590H300V640H640V560H760"/>
+          <path class="route" d="M1440 600H1120V530H900V600H700"/>
+          <path class="route" d="M120 0V220H360V300"/>
+          <path class="route" d="M1320 720V500H1080V430"/>
+        </g>
+        <g>
+          <path class="pulse" pathLength="100" d="M0 150H260V90H560V150H900" style="animation-duration: 8s; animation-delay: -1s"/>
+          <path class="pulse" pathLength="100" d="M1440 120H1180V200H980V120H800" style="animation-duration: 10s; animation-delay: -4s"/>
+          <path class="pulse" pathLength="100" d="M0 590H300V640H640V560H760" style="animation-duration: 7s; animation-delay: -2s"/>
+          <path class="pulse" pathLength="100" d="M1440 600H1120V530H900V600H700" style="animation-duration: 11s; animation-delay: -6s"/>
+          <path class="pulse" pathLength="100" d="M120 0V220H360V300" style="animation-duration: 9s; animation-delay: -3s"/>
+          <path class="pulse" pathLength="100" d="M1320 720V500H1080V430" style="animation-duration: 12s; animation-delay: -8s"/>
+        </g>
+        <g>
+          <circle class="node" cx="900" cy="150" r="3.5"/>
+          <circle class="node" cx="800" cy="120" r="3.5"/>
+          <circle class="node" cx="760" cy="560" r="3.5"/>
+          <circle class="node" cx="700" cy="600" r="3.5"/>
+          <circle class="node" cx="360" cy="300" r="3.5"/>
+          <circle class="node" cx="1080" cy="430" r="3.5"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-main">
+      <h1 class="a-rise" style="animation-delay: .1s">Jesús Pérez Marinetto<span class="cursor" aria-hidden="true">_</span></h1>
+      <p class="hero-role a-reveal" id="hero-role" style="animation-delay: .7s" data-i18n="heroRole">Administrador de Sistemas Informáticos en Red</p>
+    </div>
+    <div class="hero-hint a-fade" style="animation-delay: 2.4s">
+      <span class="label" data-i18n="scrollHint">Desplázate hacia abajo</span>
+      <svg class="a-bob" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7.5l6 6 6-6"/></svg>
+    </div>
+  </section>
+
+  <!-- ============================ SOBRE MÍ ============================ -->
+  <section class="section scroll-in" id="about">
+    <h2 data-i18n="aboutTitle">Sobre mí</h2>
+    <div class="section-col">
+      <div class="about-top">
+        <img class="about-photo" src="assets/jesus.jpg" alt="Jesús Pérez Marinetto" width="280" height="350">
+        <div class="about-text">
+          <p data-i18n="aboutText">Soy administrador de sistemas informáticos y redes, y me estoy especializando en inteligencia artificial, Big Data, gestión de datos y entrenamiento de modelos.</p>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="fact">
+          <div class="fact-k label" data-i18n="factLocation">Ubicación</div>
+          <div class="fact-v" data-i18n="factLocationValue">Granada, España</div>
+        </div>
+        <div class="fact">
+          <div class="fact-k label" data-i18n="factLanguages">Idiomas</div>
+          <div class="langs">
+            <div class="lang">
+              <div class="lang-name" data-i18n="langEs">Español</div>
+              <div class="bars" role="img" aria-label="Español, nativo" data-i18n-label="langEsAria">
+                <span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span>
+                <span class="lang-level" data-i18n="langEsLevel">Nativo</span>
+              </div>
+            </div>
+            <div class="lang">
+              <div class="lang-name" data-i18n="langEn">Inglés</div>
+              <div class="bars" role="img" aria-label="Inglés, nivel C1 de C2" data-i18n-label="langEnAria">
+                <span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span>
+                <span class="lang-level">C1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TECNOLOGÍAS ============================ -->
+  <section class="section scroll-in" id="stack">
+    <h2 data-i18n="stackTitle">Tecnologías</h2>
+
+    <!-- Carrusel decorativo: lo genera js/main.js con js/icons.js -->
+    <div class="marquee" aria-hidden="true"><div class="mtrack" id="mtrack"></div></div>
+
+    <div class="stack-groups">
+      <div class="stack-group">
+        <h3 class="stack-title" data-i18n="groupOs">Sistemas operativos y virtualización</h3>
+        <ul class="techs"><li class="tech">Windows</li><li class="tech">Windows Server</li><li class="tech">Linux</li><li class="tech">Ubuntu</li><li class="tech">Debian</li><li class="tech">macOS</li><li class="tech">Proxmox</li><li class="tech">VirtualBox</li><li class="tech">Docker</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 class="stack-title" data-i18n="groupNet">Servicios de red</h3>
+        <ul class="techs"><li class="tech">Active Directory</li><li class="tech">Cisco Packet Tracer</li><li class="tech">DNS</li><li class="tech">DHCP</li><li class="tech">Apache</li><li class="tech">Nginx</li><li class="tech">Samba</li><li class="tech">VPN</li><li class="tech">Firewalls</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 class="stack-title" data-i18n="groupSec">Ciberseguridad</h3>
+        <ul class="techs"><li class="tech">Kali Linux</li><li class="tech">Wireshark</li><li class="tech">Nmap</li><li class="tech">Metasploit</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 class="stack-title" data-i18n="groupDev">Desarrollo y bases de datos</h3>
+        <ul class="techs"><li class="tech">Python</li><li class="tech">SQL</li><li class="tech">MySQL</li><li class="tech">MariaDB</li><li class="tech">PHP</li><li class="tech">Shell</li><li class="tech">PowerShell</li><li class="tech">JavaScript</li><li class="tech">HTML</li><li class="tech">CSS</li><li class="tech">Vue</li><li class="tech">Git</li><li class="tech">GitHub</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 class="stack-title" data-i18n="groupCloud">Cloud y automatización</h3>
+        <ul class="techs"><li class="tech">AWS</li><li class="tech">APIs</li><li class="tech">n8n</li><li class="tech">Dify</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 class="stack-title" data-i18n="groupDesign">Diseño</h3>
+        <ul class="techs"><li class="tech">Figma</li><li class="tech">Canva</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 class="stack-title" data-i18n="groupData">Datos e inteligencia artificial</h3>
+        <ul class="techs"><li class="tech">Pandas</li><li class="tech">NumPy</li><li class="tech">Matplotlib</li><li class="tech">Jupyter</li><li class="tech">Power BI</li><li class="tech">Excel</li><li class="tech">Office</li><li class="tech">Machine Learning</li><li class="tech">Big Data</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ EXPERIENCIA ============================ -->
+  <section class="section scroll-in" id="experience">
+    <h2 data-i18n="experienceTitle">Experiencia</h2>
+    <ol class="timeline" style="list-style: none; margin: 0; padding: 0">
+      <li class="tl-item">
+        <div class="tl-rail"><span class="tl-dot"></span></div>
+        <div class="tl-body">
+          <h3 class="tl-role" data-i18n="exp1Role">Administrador de sistemas</h3>
+          <div class="tl-org">IN4BYTE Soft &amp; Hard Solutions</div>
+          <div class="tl-dates" data-i18n="exp1Dates">feb 2026 – jun 2026</div>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-rail"><span class="tl-dot"></span></div>
+        <div class="tl-body">
+          <h3 class="tl-role" data-i18n="exp2Role">Gestor de bases de datos y diseñador web</h3>
+          <div class="tl-org">Ateneo Formación</div>
+          <div class="tl-dates" data-i18n="exp2Dates">dic 2023 – ene 2026</div>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-rail"><span class="tl-dot"></span></div>
+        <div class="tl-body">
+          <h3 class="tl-role" data-i18n="exp3Role">Administrador de sistemas</h3>
+          <div class="tl-org">Ranel S.L.</div>
+          <div class="tl-dates" data-i18n="exp3Dates">ene 2025 – jun 2025</div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============================ CERTIFICACIONES ============================ -->
+  <section class="section scroll-in" id="certs">
+    <h2 data-i18n="certsTitle">Certificaciones</h2>
+    <div class="section-col" style="gap: 0">
+      <div class="cert">
+        <!-- Para mostrar el símbolo de la insignia: guarda la imagen como assets/ibm-badge.png
+             y sustituye "IBM" por <img src="assets/ibm-badge.png" alt="Insignia IBM SkillsBuild"> -->
+        <div class="cert-badge label">IBM</div>
+        <div class="cert-body">
+          <h3 class="cert-title">Cybersecurity Fundamentals</h3>
+          <div class="label">IBM SkillsBuild</div>
+          <p class="cert-text" data-i18n="certText">Conceptos básicos de ciberseguridad: tipos de ataques, ingeniería social, criptografía y estrategias para prevenir, detectar y responder a incidentes.</p>
+          <a class="link" href="https://www.credly.com/badges/ad7c35fb-e085-49a5-a4d6-ec509e6fe93e/public_url" style="align-self: flex-start" rel="noopener"><span data-i18n="certLink">Ver credencial verificada</span> →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ PROYECTOS ============================ -->
+  <section class="section scroll-in" id="projects">
+    <h2 data-i18n="projectsTitle">Proyectos</h2>
+    <div class="section-col">
+      <div class="projects">
+        <a class="project" href="https://github.com/Marinettoo/Niddo" rel="noopener">
+          <div class="project-head"><div class="project-name">Niddo</div><span class="label">PHP</span></div>
+          <p class="project-desc" data-i18n="proj1">Servidor doméstico de copias de seguridad autoalojado.</p>
+        </a>
+        <a class="project" href="https://github.com/Marinettoo/DNS-Redirector" rel="noopener">
+          <div class="project-head"><div class="project-name">DNS-Redirector</div><span class="label">Python</span></div>
+          <p class="project-desc" data-i18n="proj2">Redirección de consultas DNS.</p>
+        </a>
+        <a class="project" href="https://github.com/Marinettoo/SAND-App" rel="noopener">
+          <div class="project-head"><div class="project-name">SAND-App</div><span class="label">Kotlin</span></div>
+          <p class="project-desc" data-i18n="proj3">Aplicación Android.</p>
+        </a>
+        <a class="project" href="https://github.com/Marinettoo/DHCP-Project" rel="noopener">
+          <div class="project-head"><div class="project-name">DHCP-Project</div><span class="label">Shell</span></div>
+          <p class="project-desc" data-i18n="proj4">Práctica de servidor DHCP del módulo Servicios de Red e Internet.</p>
+        </a>
+      </div>
+      <a class="link" href="https://github.com/Marinettoo?tab=repositories" style="align-self: flex-start" rel="noopener"><span data-i18n="allRepos">Todos los repositorios en GitHub</span> →</a>
+    </div>
+  </section>
+
+  <!-- ============================ CONTACTO ============================ -->
+  <section class="section scroll-in" id="contact">
+    <h2 data-i18n="contactTitle">Contacto</h2>
+    <div class="section-col">
+      <div class="open-status"><span class="live" aria-hidden="true"></span><span data-i18n="openText">Abierto a nuevos proyectos</span></div>
+      <p class="contact-text" data-i18n="contactText">La forma más rápida de escribirme es por correo.</p>
+      <div class="contact-links">
+        <a class="btn" href="mailto:jperezmarinetto@gmail.com">jperezmarinetto@gmail.com</a>
+        <a class="link" href="https://www.linkedin.com/in/jes%C3%BAs-p%C3%A9rez-marinetto-b32292396/" rel="noopener">LinkedIn →</a>
+        <a class="link" href="https://github.com/Marinettoo" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer label">
+    <span>© 2026 Jesús Pérez Marinetto</span>
+  </footer>
+
+</main>
+</body>
+</html>
