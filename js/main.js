@@ -60,7 +60,12 @@
     allRepos: 'All repositories on GitHub',
     contactTitle: 'Contact',
     openText: 'Open to new projects',
-    contactText: 'The fastest way to reach me is by email.'
+    contactText: 'The fastest way to reach me is by email.',
+    c1Title: 'English level C1',
+    c1Text: 'C1 certificate of the Common European Framework of Reference for Languages.',
+    c1Link: 'View certificate',
+    c1Entity: 'Anglia Examinations',
+    cvButton: 'View CV'
   };
   var UI = {
     es: { themeToDark: 'Cambiar a modo oscuro', themeToLight: 'Cambiar a modo claro', openMenu: 'Abrir menú', closeMenu: 'Cerrar menú',

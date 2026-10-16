@@ -66,6 +66,7 @@
 
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -357,7 +358,12 @@ section[id] { scroll-margin-top: 96px; }
   flex: 0 0 96px; height: 96px; display: flex; align-items: center; justify-content: center;
   color: var(--ink-muted);
 }
-.cert-badge img { width: 96px; height: 96px; object-fit: contain; }
+.cert-badge img { width: 96px; height: 96px; object-fit: contain; border-radius: 8px; }
+a.cert-badge { text-decoration: none; }
+.cert-badge.badge-text {
+  border: 1px solid var(--line); border-radius: 8px;
+  font-size: 32px; line-height: 1; font-weight: 600; letter-spacing: -.02em; color: var(--ink);
+}
 .cert-body { flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
 .cert-title { font-size: 24px; line-height: 30px; font-weight: 600; }
 .cert-text { max-width: 560px; color: var(--ink-muted); }
@@ -388,6 +394,10 @@ section[id] { scroll-margin-top: 96px; }
   border-radius: 8px; background: var(--accent); color: var(--on-accent);
   text-decoration: none; font-size: 14px; line-height: 20px; font-weight: 500;
 }
+
+/* Botón secundario (CV) */
+.btn.btn-outline { background: transparent; color: var(--ink); border: 1px solid var(--ink-muted); }
+.btn.btn-outline:hover { border-color: var(--ink); }
 
 /* ---------- Pie ---------- */
 .site-footer {
