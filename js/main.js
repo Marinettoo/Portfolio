@@ -239,6 +239,44 @@
     TECH.forEach(function (t) { frag.appendChild(buildItem(t, false)); });
     TECH.forEach(function (t) { frag.appendChild(buildItem(t, true)); }); // copia para el bucle continuo
     track.appendChild(frag);
+
+    /* Movimiento propio: automático + arrastre con el dedo/ratón (con inercia) */
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) {
+      var box = track.parentNode;
+      track.classList.add('js-drive');
+      var pos = 0, vel = 0, dragging = false, hover = false, lastX = 0, lastT = 0, prev = 0;
+      var half = function () { return track.scrollWidth / 2; };
+      var wrap = function () { var h = half(); if (h) { pos = ((pos % h) + h) % h; } };
+      box.addEventListener('pointerdown', function (e) {
+        dragging = true; lastX = e.clientX; lastT = e.timeStamp; vel = 0;
+        try { box.setPointerCapture(e.pointerId); } catch (_) {}
+      });
+      box.addEventListener('pointermove', function (e) {
+        if (!dragging) return;
+        var dx = e.clientX - lastX, dt = Math.max(1, e.timeStamp - lastT);
+        pos -= dx; vel = -dx / dt * 1000; // px/s
+        lastX = e.clientX; lastT = e.timeStamp;
+      });
+      var end = function () { dragging = false; };
+      box.addEventListener('pointerup', end);
+      box.addEventListener('pointercancel', end);
+      box.addEventListener('mouseenter', function () { hover = true; });
+      box.addEventListener('mouseleave', function () { hover = false; });
+      var frame = function (now) {
+        var dt = Math.min(0.05, (now - (prev || now)) / 1000); prev = now;
+        var base = half() / 72; // misma velocidad que antes: 72 s por vuelta
+        if (!dragging) {
+          vel *= Math.pow(0.04, dt);               // la inercia se apaga sola
+          if (Math.abs(vel) < base) vel = 0;
+          pos += vel * dt + (hover ? 0 : base * dt);
+        }
+        wrap();
+        track.style.transform = 'translate3d(' + (-pos) + 'px,0,0)';
+        requestAnimationFrame(frame);
+      };
+      requestAnimationFrame(frame);
+    }
   }
 
   /* ----------------------------- Inicio ----------------------------- */

@@ -312,6 +312,9 @@ section[id] { scroll-margin-top: 96px; }
   mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
 }
 .mtrack { display: flex; width: max-content; }
+.marquee { touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
+.marquee:active { cursor: grabbing; }
+.mtrack.js-drive { animation: none !important; will-change: transform; }
 .mitem {
   display: flex; flex-direction: column; align-items: center; gap: 8px;
   margin-right: 48px; color: var(--ink-muted); transition: color .2s ease;
